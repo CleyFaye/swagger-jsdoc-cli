@@ -1,6 +1,6 @@
 {
   "name": "@cley_faye/swagger-jsdoc-cli",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "CLI for swagger-jsdoc",
   "bin": {
     "swagger-jsdoc-cli": "bin/swagger-jsdoc-cli.js"
