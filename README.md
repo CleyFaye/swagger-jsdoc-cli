@@ -10,16 +10,15 @@ Usage
 Install using `npm` (or similar):
 
 ```shell
-$ npm install -D @cley_faye/swagger-jsdoc-cli
+npm install -D @cley_faye/swagger-jsdoc-cli
 ```
 
 And run:
 
 ```shell
-$ npx swagger-jsdoc-cli -d <config js path> -o <output path>
+npx swagger-jsdoc-cli -d <config js path> -o <output path>
 ```
 
 Configuration file
 ------------------
 The configuration file is expected to be a JavaScript file that exports the "options" object described as the parameter to `swaggerJsdoc()`.
-
