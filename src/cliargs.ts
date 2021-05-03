@@ -10,6 +10,9 @@ export interface CLIArgs {
   outputPath?: string;
 }
 
+/**
+ * Lightweight version of what we're looking in package.json
+ */
 interface PkgLight {
   version: string;
 }
@@ -19,12 +22,16 @@ const isPkgLight = (obj: unknown): obj is PkgLight => {
   return "version" in rec && typeof rec.version === "string";
 };
 
+const getProjectRootPath = () => {
+  return dirname(fileURLToPath(import.meta.url));
+}
+
 /**
  * Read program version from package.json
  */
 const getPkgVersion = async (): Promise<string> => {
   const pkgPath = join(
-    dirname(fileURLToPath(import.meta.url)),
+    getProjectRootPath(),
     "..",
     "package.json",
   );
