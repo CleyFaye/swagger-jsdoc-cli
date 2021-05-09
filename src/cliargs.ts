@@ -22,9 +22,7 @@ const isPkgLight = (obj: unknown): obj is PkgLight => {
   return "version" in rec && typeof rec.version === "string";
 };
 
-const getProjectRootPath = () => {
-  return dirname(fileURLToPath(import.meta.url));
-}
+const getProjectRootPath = () => dirname(fileURLToPath(import.meta.url));
 
 /**
  * Read program version from package.json
